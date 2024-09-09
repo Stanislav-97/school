@@ -2,10 +2,9 @@
 
 Rails.application.routes.draw do
   resources :schools, only: [] do
-    resources :classes, only: %i[index], controller: 'school_classes' do
-      resources :students, only: %i[index]
+    resources :classes, only: %i[index], controller: 'schools/school_classes' do
+      resources :students, only: %i[index], controller: 'schools/classes/students'
     end
-    resources :school_classes, only: %i[]
   end
 
   resources :students, only: %i[create destroy]

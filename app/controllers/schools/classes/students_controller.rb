@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class Schools::Classes::StudentsController < ApplicationController
   def index
     render json: { data: StudentBlueprint.render_as_hash(students) }
   end

@@ -1,4 +1,4 @@
-class SchoolClassesController < ApplicationController
+class Schools::SchoolClassesController < ApplicationController
   def index
     render json: { data: SchoolClassBlueprint.render_as_hash(classes) }
   end
@@ -10,7 +10,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def classes
-    @classes ||= school.classes
+    @classes ||= school.school_classes
   end
 end
 
