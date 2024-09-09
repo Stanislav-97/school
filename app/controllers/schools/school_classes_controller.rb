@@ -13,4 +13,3 @@ class Schools::SchoolClassesController < ApplicationController
     @classes ||= school.school_classes
   end
 end
-

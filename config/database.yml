@@ -1,18 +1,16 @@
-# config/database.yml
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: <%= ENV.fetch("PG_HOST") { "db" } %>
+  port: <%= ENV.fetch("PG_PORT") { 5432 } %>
+  username: <%= ENV.fetch("PG_USER") { "root" } %>
+  password: <%= ENV.fetch("PG_PASSWORD") { "root" } %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  port: 5432
-  host: database
+
 development:
   <<: *default
-  database: blogpg_development
+  database: schools_dev
+
 test:
   <<: *default
-  database: blogpg_test
-production:
-  <<: *default
-  database: blogpg_production
-  username: blogpg
-  password: <%= ENV['BLOGPG_DATABASE_PASSWORD'] %>
+  database: schools_test
