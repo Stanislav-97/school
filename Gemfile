@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby "3.2.2"
+ruby "3.2.5"
 
 gem "blueprinter"
 
@@ -15,7 +15,7 @@ gem "rails", "~> 7.1.4"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"

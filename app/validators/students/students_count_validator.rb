@@ -5,7 +5,7 @@ module Students
     def validate(record)
       return unless full?(record.school_class)
 
-      record.errors.add("Класс уже набран")
+      record.errors.add(:school_class_id, "Класс уже набран")
     end
 
     private
